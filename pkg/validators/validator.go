@@ -11,11 +11,6 @@ type Validatable interface {
 	Validate() error
 }
 
-type Toggleable interface {
-	Validatable
-	IsEnabled() bool
-}
-
 func JsonBinding(ctx *fiber.Ctx, input interface{}) error {
 	// Faz o parsing do corpo para o input
 	if err := ctx.BodyParser(&input); err != nil {
