@@ -27,3 +27,4 @@ func GetBearerToken(ctx *fiber.Ctx) (string, error) {
 
 	return authHeader[7:], nil
 }
+
